@@ -33,6 +33,15 @@ namespace Estudo
         protected global::System.Web.UI.WebControls.TextBox name;
 
         /// <summary>
+        /// Controle idupdt.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox idupdt;
+
+        /// <summary>
         /// Controle buttonsend.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,24 @@ namespace Estudo
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button buttonsend;
+
+        /// <summary>
+        /// Controle buttonupdt.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonupdt;
+
+        /// <summary>
+        /// Controle buttondlt.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttondlt;
 
         /// <summary>
         /// Controle txtsucess.
@@ -58,5 +85,14 @@ namespace Estudo
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView pessoatable;
+
+        /// <summary>
+        /// Controle teste.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl teste;
     }
 }

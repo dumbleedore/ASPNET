@@ -28,10 +28,19 @@ namespace Estudo
         {
             sql.ConnectionString = "Data Source=DESKTOP-U9QEEE8;Initial Catalog=Usuario;Integrated Security=True";
             sql.Open();
+
+            ds = new DataSet();
+            cmd.CommandText = "SELECT * FROM Pessoa";
+            cmd.Connection = sql;
+            sda = new SqlDataAdapter(cmd);
+            sda.Fill(ds);
+            cmd.ExecuteNonQuery();
             if (!Page.IsPostBack)
             {
                 showData();
             }
+
+          
        
         }
 
@@ -66,6 +75,22 @@ namespace Estudo
             pessoatable.DataBind();
             sql.Close();
             
+        }
+
+        protected void buttonupdt_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = "UPDATE Pessoa SET NAME='" + name.Text.ToString() + "' WHERE ID='"+ Convert.ToInt32(idupdt.Text.ToString())  +"'";
+            cmd.Connection = sql;
+            cmd.ExecuteNonQuery();
+            showData();
+        }
+
+        protected void buttondlt_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = "DELETE FROM PESSOA WHERE ID='"+ Convert.ToInt32(idupdt.Text.ToString()) + "'";
+            cmd.Connection = sql;
+            cmd.ExecuteNonQuery();
+            showData();
         }
     }
 }
