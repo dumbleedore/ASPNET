@@ -33,13 +33,13 @@ namespace Estudo
         protected global::System.Web.UI.WebControls.TextBox name;
 
         /// <summary>
-        /// Controle idupdt.
+        /// Controle ddl.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idupdt;
+        protected global::System.Web.UI.WebControls.DropDownList ddl;
 
         /// <summary>
         /// Controle buttonsend.

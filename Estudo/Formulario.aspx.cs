@@ -37,6 +37,9 @@ namespace Estudo
             cmd.ExecuteNonQuery();
             if (!Page.IsPostBack)
             {
+                ddl.DataSource = ds;
+                ddl.DataValueField = "ID";
+                ddl.DataBind();
                 showData();
             }
 
@@ -54,6 +57,10 @@ namespace Estudo
                 cmd.ExecuteNonQuery();
                 txtsucess.InnerText = "Adicionado Com Sucesso!!!";
                 showData();
+                ddl.Items.Clear();
+                ddl.DataSource = ds;
+                ddl.DataValueField = "ID";
+                ddl.DataBind();
             }
             catch (Exception err)
             {
@@ -79,18 +86,27 @@ namespace Estudo
 
         protected void buttonupdt_Click(object sender, EventArgs e)
         {
-            cmd.CommandText = "UPDATE Pessoa SET NAME='" + name.Text.ToString() + "' WHERE ID='"+ Convert.ToInt32(idupdt.Text.ToString())  +"'";
-            cmd.Connection = sql;
-            cmd.ExecuteNonQuery();
-            showData();
-        }
+                cmd.CommandText = "UPDATE Pessoa SET NAME='" + name.Text.ToString() + "' WHERE ID='" + Convert.ToInt32(ddl.SelectedValue) + "'";
+                cmd.Connection = sql;
+                cmd.ExecuteNonQuery();
+                showData();
 
+
+            
+        }
         protected void buttondlt_Click(object sender, EventArgs e)
         {
-            cmd.CommandText = "DELETE FROM PESSOA WHERE ID='"+ Convert.ToInt32(idupdt.Text.ToString()) + "'";
+            cmd.CommandText = "DELETE FROM Pessoa WHERE ID='" + Convert.ToInt32(ddl.SelectedValue) + "'";
             cmd.Connection = sql;
             cmd.ExecuteNonQuery();
             showData();
+            ddl.Items.Clear();
+            ddl.DataSource = ds;
+            ddl.DataValueField = "ID";
+            ddl.DataBind();
         }
+
+
+
     }
 }

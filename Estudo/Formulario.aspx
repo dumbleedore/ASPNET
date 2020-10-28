@@ -17,15 +17,13 @@
         <div>
             <asp:Label  runat="server" AssociatedControlID="name">Nome: </asp:Label>
             <asp:TextBox id="name" runat="server"></asp:TextBox>
-            <asp:Label  runat="server" AssociatedControlID="idupdt">ID: </asp:Label>
-             <asp:TextBox id="idupdt" runat="server"></asp:TextBox>
-
-            </asp:DropDownList>
+            <asp:DropDownList runat="server" ID="ddl"></asp:DropDownList>
             <br />
             <br />
             <asp:Button id="buttonsend" Text="Enviar" runat="server" onClick="enviar_Click"/>
             <asp:Button id="buttonupdt" Text="Update" runat="server" OnClick="buttonupdt_Click"/>
             <asp:Button id="buttondlt" Text="Delete" runat="server" OnClick="buttondlt_Click"/>
+         
             <p id="txtsucess" runat="server"></p>
             <asp:GridView ID="pessoatable" runat="server"/>
         </div>
